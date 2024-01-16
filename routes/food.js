@@ -1,5 +1,5 @@
 const router = require("express").Router()
-router.get('/', (req, res) => {
-    return req.send('success')
+router.get('/:id', (req, res) => {
+    return res.send(`success to read ${req.params.id}`)
 })
-export default router
+module.exports = router
